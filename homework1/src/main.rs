@@ -14,7 +14,6 @@ fn celsius_to_fahrenheit(c: f64) -> f64
     (c * 9.0 / 5.0) + FREEZING_POINT_F
 }
 
-
 // assignment 2 
 
 // check if number == even
@@ -22,7 +21,6 @@ fn is_even(n: i32) -> bool
 {
     n % 2 == 0
 }
-
 
 // assignment 3
 // check guess against secret
@@ -39,10 +37,9 @@ fn check_guess(guess: i32, secret: i32) -> i32
     }
 }
 
-// main 
-fn main() 
+// assignment 1
+fn ass1()
 {
-    // assignment 1
     let mut temp_f: f64 = 32.0;
     let temp_c = fahrenheit_to_celsius(temp_f);
     println!("{}°F = {:.2}°C", temp_f, temp_c);
@@ -53,8 +50,11 @@ fn main()
         let temp_c = fahrenheit_to_celsius(temp_f);
         println!("{}°F = {:.2}°C", temp_f, temp_c);
     }
-    
-    // assignment 2
+}
+
+// assignment 2
+fn ass2()
+{
     let numbers: [i32; 10] = [1, 2, 3, 4, 5, 6, 9, 10, 15, 20];
     
     for num in numbers 
@@ -100,8 +100,11 @@ fn main()
         i += 1;
     }
     println!("Largest: {}", largest);
-    
-    // assignment 3
+}
+
+// assignment 3
+fn ass3()
+{
     let secret = 42;
     let guesses = [30, 50, 40, 43, 42];
     let mut attempts = 0;
@@ -123,4 +126,12 @@ fn main()
     }
     
     println!("took {} guesses", attempts);
+}
+
+// main 
+fn main() 
+{
+    ass1();
+    ass2();
+    ass3();
 }
